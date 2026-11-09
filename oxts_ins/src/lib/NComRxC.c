@@ -3435,8 +3435,8 @@ static void Iso8855OutputsCompute(NComRxC *Com)
 			// ISO earth-fixed system velocity.
 
 			// V_ni = C_noni V_no
-			NComSetIsoVnX(Com, ele(&v_en, 1, 0));
-			NComSetIsoVnY(Com, ele(&v_en, 0, 0));
+			NComSetIsoVnX(Com,  ele(&v_en, 1, 0));
+			NComSetIsoVnY(Com,  ele(&v_en, 0, 0));
 			NComSetIsoVnZ(Com, -ele(&v_en, 2, 0));
 
 
@@ -3445,9 +3445,9 @@ static void Iso8855OutputsCompute(NComRxC *Com)
 			{
 				// V_hi = C_hohi V_ho, V_ho = C_noho V_no
 				MatMultRAtB(&v_eh, &ComI->C_hn, &v_en);
-				NComSetIsoVhX(Com, ele(&v_eh, 0, 0));
-				NComSetIsoVhY(Com, ele(&v_eh, 1, 0));
-				NComSetIsoVhZ(Com, ele(&v_eh, 2, 0));
+				NComSetIsoVhX(Com,  ele(&v_eh, 0, 0));
+				NComSetIsoVhY(Com, -ele(&v_eh, 1, 0));
+				NComSetIsoVhZ(Com, -ele(&v_eh, 2, 0));
 			}
 
 			// ISO vehicle system velocity.
@@ -3456,8 +3456,8 @@ static void Iso8855OutputsCompute(NComRxC *Com)
 				// V_oi = C_oooi V_oo, V_oo = C_hooo V_ho
 				MatMultRAtB(&v_eb, &ComI->C_oh, &v_eh);
 				NComSetIsoVoX(Com,  ele(&v_eb, 0, 0));
-				NComSetIsoVoY(Com, ele(&v_eb, 1, 0));
-				NComSetIsoVoZ(Com, ele(&v_eb, 2, 0));
+				NComSetIsoVoY(Com, -ele(&v_eb, 1, 0));
+				NComSetIsoVoZ(Com, -ele(&v_eb, 2, 0));
 			}
 		}
 
