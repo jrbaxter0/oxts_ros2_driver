@@ -3,18 +3,18 @@
 //! The software is protected by copyright of Oxford Technical Solutions at oxts.com.
 //! © 2008 - 2017, Oxford Technical Solutions Ltd.
 //! Unauthorised use, copying or distribution is not permitted.
-//! 
-//! Permission is hereby granted, free of charge, to any person obtaining a copy of this software and 
-//! associated documentation files (the "Software"), to deal in the Software without restriction, including 
-//! without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell 
-//! copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the 
+//!
+//! Permission is hereby granted, free of charge, to any person obtaining a copy of this software and
+//! associated documentation files (the "Software"), to deal in the Software without restriction, including
+//! without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+//! copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the
 //! following conditions:
 //!
-//! All copies or substantial portions of the software must reproduce the above copyright notices, this list 
+//! All copies or substantial portions of the software must reproduce the above copyright notices, this list
 //! of conditions and the following disclaimer in the software documentation and/or other materials provided
 //! with the distribution.
 //!
-//! The software is provided by the copyright holders "as is" without any warranty of any kind, express or 
+//! The software is provided by the copyright holders "as is" without any warranty of any kind, express or
 //! implied, including, but not limited to, warranties of merchantability or fitness for a particular purpose.
 //! In no event shall the copyright holders be liable for any direct, indirect, incidental, special,
 //! exemplary, or consequential damages however caused and on any liability, whether in contract, strict
@@ -5147,7 +5147,7 @@ static void DecodeExtra40(NComRxC *Com)
 
 	// TODO: NCOM version ID
 	// TODO: Output latency
-	
+
 	// Extended serial number
 	if (!(mCurStatus[4] == 0xFF && mCurStatus[5] == 0xFF && mCurStatus[6] == 0xFF))
 	{
