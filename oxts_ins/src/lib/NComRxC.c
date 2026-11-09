@@ -3462,6 +3462,7 @@ static void Iso8855OutputsCompute(NComRxC *Com)
 		}
 
 		// === Linear Acceleration (A) ===
+		//! \todo Likely needs sign corrections similar to linear velocity.
 
 		if (ComI->C_on_valid)
 		{
@@ -3537,6 +3538,7 @@ static void Iso8855OutputsCompute(NComRxC *Com)
 		}
 
 		// === Angular Velocity (W) ===
+		//! \todo Likely requires sign corrections similar to linear velocity.
 
 		if (IsCorrectValid)
 		{
@@ -3578,6 +3580,7 @@ static void Iso8855OutputsCompute(NComRxC *Com)
 		}
 
 		// === Angular Acceleration (Y) ===
+		//! \todo Likely requires sign corrections similar to linear velocity.
 
 		if (IsCorrectValid)
 		{
