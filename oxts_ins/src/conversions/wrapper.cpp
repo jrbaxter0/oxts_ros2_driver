@@ -273,7 +273,8 @@ geometry_msgs::msg::TwistStamped velocity(const NComRxC *nrx,
   auto q_vat = getVat(nrx);
   auto r_vat = tf2::Matrix3x3(q_vat);
   auto veh_v = tf2::Vector3(nrx->mIsoVoX, nrx->mIsoVoY, nrx->mIsoVoZ);
-  auto veh_w = tf2::Vector3(nrx->mWx, nrx->mWy, nrx->mWz);
+  auto veh_w = NAV_CONST::DEG2RADS *
+    tf2::Vector3(nrx->mWx, nrx->mWy, nrx->mWz);
   auto imu_w = tf2::Vector3();
   auto imu_v = tf2::Vector3();
   auto q_iso_oxts = tf2::Quaternion();
